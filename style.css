@@ -1359,7 +1359,9 @@ nav {
     .swiper {
         height: 70vh;
     }
-
+    .swiper-wrapper {
+        margin-left: 40px;
+    }
     .swiper-slide {
         height: 60vh;
     }

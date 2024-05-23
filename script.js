@@ -1,14 +1,14 @@
 function LenisScrolling() {
     const lenis = new Lenis({
-        duration: 1.2, // Duration of the smooth scroll animation
-        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Custom easing function
-        direction: 'vertical', // Scroll direction, can be 'vertical' or 'horizontal'
-        gestureDirection: 'vertical', // Direction of the scroll when using touch gestures
-        smooth: true, // Enable/disable smooth scrolling
-        mouseMultiplier: 1, // Multiplier for the mouse wheel speed
-        smoothTouch: false, // Smooth scroll for touch devices
-        touchMultiplier: 2, // Multiplier for touch scroll speed
-        infinite: false // Infinite scrolling
+        duration: 1.2, 
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), 
+        direction: 'vertical', 
+        gestureDirection: 'vertical',
+        smooth: true, 
+        mouseMultiplier: 1, 
+        smoothTouch: false,
+        touchMultiplier: 2,
+        infinite: false 
       })
 
     function raf(time) {
@@ -203,7 +203,13 @@ function Tile() {
             ease: "elastic.out(0.2)",
         });
     });
-
+    tl.from('.center', {
+        opacity: 0,
+        scaleX: 0,
+        scaleY: 0,
+        duration: 0.2,
+        ease: "elastic.out(0.2)",
+    });
     tl.to('.hidden svg', {
         scaleY: 0.2,
         duration: 0.4,
@@ -258,7 +264,7 @@ function initSwiper() {
             // when window width is >= 500px
             500: {
                 slidesPerView: 1,
-                spaceBetween: 0
+                spaceBetween: 10
             },
             // when window width is >= 768px
             768: {
@@ -276,7 +282,8 @@ function initSwiper() {
         scrollTrigger: {
             trigger: '.swiper',
             start: 'top 30%',
-            end: 'bottom 50%',
+            end: 'bottom bottom',
+            duration:0.1,
         }
     });
 
@@ -287,8 +294,8 @@ function initSwiper() {
             opacity: 0,
             scaleX: 0,
             scaleY: 0,
-            duration: 0.5,
-            ease: "elastic.out(0.1)",
+            // duration: 0.5,
+            // ease: "elastic.out(0.1)",
         });
     });
 }
@@ -300,8 +307,8 @@ function RotateSvg() {
         scrollTrigger: {
             trigger: ".main",
             scrub: 1,
-            start: 'center center',
-            end: '+=5000',
+            start: 'top top',
+            end: 'bottom bottom',
         },
         rotation:360,
         duration: 5,
@@ -338,14 +345,14 @@ function Footer() {
     });
     tl.to('footer svg', {
         scaleY: 0.2,
-        duration: 0.4,
+        duration: 0.5,
         repeat: 1,
         ease: "bounce.out",
     });
     tl.to('footer svg', {
         scaleY: 1,
-        duration: 0.4,
-        ease: "bounce.out",
+        duration: 0.5,
+       ease: "bounce.out",
     });
 
 }

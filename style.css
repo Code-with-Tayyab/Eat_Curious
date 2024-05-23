@@ -44,6 +44,7 @@ body {
     color: #042F1A;
     background: #FF73B5;
     border-radius: 4px;
+    cursor: pointer;
 }
 
 .move:first-child span:first-child {
@@ -765,6 +766,7 @@ nav {
         align-items: start;
         justify-content: start;
         padding-bottom: 200px;
+
     }
 
     #section_2 {
@@ -865,19 +867,13 @@ nav {
 @media (max-width:500px) {
 
     .section {
-        min-height: 100vh;
+        height: 100vh;
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
         padding: 0px;
         padding-left: 20px;
-    }
-
-    #section_1 .image img {
-        margin-left: 0;
-        padding-left: 0;
-        width: 270px;
     }
 
     .Mobile_title {
@@ -893,14 +889,6 @@ nav {
         text-align: center;
     }
 
-    #section_2 .image img {
-        width: 80%;
-    }
-
-    #section_2 .text p {
-        padding-bottom: 0px;
-    }
-
     .text p {
         max-width: 250px;
         font-size: 20px;
@@ -911,6 +899,38 @@ nav {
         font-weight: 300;
         margin: auto;
     }
+    #section_1{
+        padding-left: 70px;
+    }
+    #section_1 .Mobile_title h3{
+        width: 100%;
+        font-size: 45px;
+        padding-left: 30px;
+    }
+    #section_1 .image img {
+        width: 270px;
+    }
+    #section_1 p {
+        width: 130%;
+    }
+    #section_2 .image img {
+        width: 80%;
+    }
+
+    #section_2 .text p {
+        padding-bottom: 0px;
+    }
+    #section_4{
+        padding: 50px;
+    }
+    #section_4 .Mobile_title h3 {
+        text-align: center;
+    }
+    #section_4 .image img {
+        margin-left: 10%;
+    }
+
+
 }
 
 /* Features-start */
@@ -1334,7 +1354,10 @@ nav {
     .swiper {
         height: 60vh;
     }
-
+    .swiper-wrapper {
+        margin-left: 70px;
+    }
+    
     .swiper-slide::before {
         background: #042F1A;
         z-index: 0;
@@ -1359,9 +1382,7 @@ nav {
     .swiper {
         height: 70vh;
     }
-    .swiper-wrapper {
-        margin-left: 40px;
-    }
+
     .swiper-slide {
         height: 60vh;
     }
@@ -1570,6 +1591,7 @@ footer::after {
     font-weight: 900;
     font-family: MontserratAlternates;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 footer hr {

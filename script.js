@@ -188,7 +188,7 @@ function Tile() {
             trigger: '.tiles',
             start: 'top center',
             end: 'bottom center',
-            duration: 0.2
+            duration: 1
         }
     });
 
@@ -281,8 +281,8 @@ function initSwiper() {
     const tl = gsap.timeline({
         scrollTrigger: {
             trigger: '.swiper',
-            start: 'top 30%',
-            end: 'bottom bottom',
+            start: 'top 0%',
+            end: 'bottom center',
             duration:0.1,
         }
     });
